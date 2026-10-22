@@ -1,0 +1,25 @@
+order_id,order_date,category,product,region,quantity,unit_price,total_sales
+1,2025-01-21,Electronics,Headphones,South,4,60,240
+2,2025-01-04,Clothing,T-Shirt,North,5,20,100
+3,2025-01-07,Home & Kitchen,Coffee Maker,North,5,70,350
+4,2025-01-14,Books,Novel,North,4,12,48
+5,2025-02-18,Electronics,Laptop,South,1,800,800
+6,2025-02-04,Clothing,Jeans,North,5,45,225
+7,2025-02-19,Home & Kitchen,Blender,North,5,55,275
+8,2025-02-02,Books,Cookbook,North,2,25,50
+9,2025-03-14,Electronics,Smartphone,South,3,500,1500
+10,2025-03-10,Clothing,T-Shirt,North,5,20,100
+11,2025-03-19,Home & Kitchen,Cookware Set,South,1,120,120
+12,2025-03-04,Books,Textbook,South,3,80,240
+13,2025-04-02,Electronics,Smartphone,North,5,500,2500
+14,2025-04-22,Clothing,Jacket,South,4,90,360
+15,2025-04-15,Home & Kitchen,Cookware Set,West,3,120,360
+16,2025-04-10,Books,Textbook,West,3,80,240
+17,2025-05-03,Electronics,Laptop,South,2,800,1600
+18,2025-05-16,Clothing,Jacket,East,5,90,450
+19,2025-05-20,Home & Kitchen,Coffee Maker,West,3,70,210
+20,2025-05-14,Books,Novel,North,5,12,60
+21,2025-06-16,Electronics,Laptop,East,2,800,1600
+22,2025-06-25,Clothing,Jeans,North,1,45,45
+23,2025-06-23,Home & Kitchen,Cookware Set,East,3,120,360
+24,2025-06-26,Books,Cookbook,West,5,25,125

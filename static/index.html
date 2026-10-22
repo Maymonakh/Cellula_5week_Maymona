@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Data Analysis</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div>
+      <h1>Voice Data Analysis</h1>
+      <p class="subtitle">Ask your data in Arabic or English · اسأل بياناتك بالعربي أو الإنجليزي</p>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>1) Choose a dataset</h2>
+
+    <label class="dropzone">
+      <input type="file" id="fileInput" accept=".csv,.xlsx" class="hidden" onchange="uploadFile()">
+      <b>Click here to choose a CSV / Excel file</b>
+    </label>
+
+    <p class="center muted">or</p>
+    <div class="center">
+      <button class="secondary" onclick="useSample()">Use the sample sales dataset</button>
+    </div>
+
+    <div id="datasetBox" class="hidden">
+      <div class="chips" id="datasetChips"></div>
+      <div class="scroll" id="preview"></div>
+    </div>
+  </div>
+
+  <div id="askCard" class="card hidden">
+    <h2>2) Ask your question</h2>
+
+    <div class="ask-row">
+      <div class="mic-box">
+        <button id="recordButton" class="mic" onclick="toggleRecording()">🎤</button>
+        <div id="timer" class="muted">Tap to speak</div>
+      </div>
+
+      <div class="segmented">
+        <input type="radio" name="language" id="langAuto" value="" checked>
+        <label for="langAuto">Auto</label>
+        <input type="radio" name="language" id="langAr" value="ar">
+        <label for="langAr">عربي</label>
+        <input type="radio" name="language" id="langEn" value="en">
+        <label for="langEn">English</label>
+      </div>
+    </div>
+
+    <div class="text-row">
+      <input type="text" id="question" dir="auto" placeholder="Or type your question · أو اكتب سؤالك هنا"
+             onkeydown="if (event.key === 'Enter') askText()">
+      <button onclick="askText()">Ask</button>
+    </div>
+
+    <p class="muted">Try an example:</p>
+    <div class="chips" id="examples"></div>
+  </div>
+
+  <div class="status">
+    <span id="spinner" class="spinner hidden"></span>
+    <span id="statusText"></span>
+  </div>
+
+  <div id="result" class="card hidden">
+    <h2>3) Answer</h2>
+
+    <div class="bubble">
+      <span id="questionText" dir="auto"></span>
+      <span id="langBadge" class="badge hidden"></span>
+    </div>
+
+    <div id="explanation" class="answer hidden" dir="auto"></div>
+
+    <div id="chart"></div>
+    <div id="resultTable" class="scroll"></div>
+    <p id="rowCount" class="muted"></p>
+
+    <details>
+      <summary>Show the SQL query</summary>
+      <pre id="sql"></pre>
+    </details>
+    <button class="secondary small" onclick="copySql()"> Copy SQL</button>
+  </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
